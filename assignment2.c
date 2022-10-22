@@ -101,6 +101,8 @@ int check_user_password(const char* file_name,
 // FINISHED
 int fib3_p(unsigned int n, unsigned int p) {
 
+  if(n <= 2) return n;
+  
   int zero = 0;
   int one = 1;
   int two = 2;
@@ -114,10 +116,8 @@ int fib3_p(unsigned int n, unsigned int p) {
       one = two;
       two = fib_mod;
   }
+
   return two;
-
-
-  // return -1;
 }
 
 
