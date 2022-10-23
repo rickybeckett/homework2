@@ -5,7 +5,7 @@
 #include "assignment2.h"
 
 int add_user_password(const char* file_name, const char* username, const char* password) {
-  char line[256];
+  //char line[256];
 
   FILE *fptr;
 
@@ -36,10 +36,12 @@ int add_user_password(const char* file_name, const char* username, const char* p
     return 1;
   }
 
-  if(check == 1 || check == -3) {
-    fclose(fptr);
-    return 0;
-  }
+  fclose(fptr);
+  // if(check == 1 || check == -3) {
+  //   return 0;
+  // }
+
+  return 0;
 }
 
 
@@ -298,5 +300,6 @@ char* last_state(const char* state) {
 
   }
 
+  free(previous_state);
   return new_state;
 }  
