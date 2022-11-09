@@ -119,7 +119,7 @@ char* evolve(const char* state) {
   int size_of_game = strlen(state);
   
   char* game_copy;
-  game_copy = (char*)malloc(size_of_game);
+  game_copy = malloc(sizeof(char*)*size_of_game);
   
   int i;
   int pebb_count = 0;
@@ -137,7 +137,7 @@ char* evolve(const char* state) {
     }
   }
 
-  int* amount_of_pebb = malloc(pebb_count); // sets amount of spaces for array amount_of_peb
+  int* amount_of_pebb = malloc(sizeof(int)*pebb_count); // sets amount of spaces for array amount_of_peb
   int counter = 0;
   for(i = 0; i < size_of_game; i++) // adds location to amount of pebs
   {
@@ -258,7 +258,7 @@ char* last_state(const char* state) {
   int repeat = 1;
 
   char* previous_state;
-  previous_state = (char*)malloc(strlen(state));
+  previous_state = malloc(sizeof(char*)strlen(state));
 
   for(int i=0; i<strlen(state); i++)  {
     previous_state[i] = state[i];
