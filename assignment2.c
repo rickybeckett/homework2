@@ -256,9 +256,10 @@ char* last_state(const char* state) {
   // implement me
 
   int repeat = 1;
+  int size_state = strlen(state);
 
   char* previous_state;
-  previous_state = malloc(sizeof(char*)strlen(state));
+  previous_state = malloc(sizeof(char*)*size_state);
 
   for(int i=0; i<strlen(state); i++)  {
     previous_state[i] = state[i];
@@ -302,4 +303,4 @@ char* last_state(const char* state) {
 
   free(previous_state);
   return new_state;
-}  
+} 
